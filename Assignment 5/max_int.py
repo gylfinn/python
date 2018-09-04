@@ -5,6 +5,8 @@ number_list = []
 
 while   num_int >= 0:
     number_list.append(num_int)
+    num_int = int(input("Input a number: ")) 
+
 max_int = max(number_list)
 
 
