@@ -9,3 +9,4 @@ while True:
          sum = tala1+tala2
          print("Summa talnanna er: " + str(sum))
          break
+         
