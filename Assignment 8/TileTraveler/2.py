@@ -1,12 +1,21 @@
+#Forritið keyrir á meðan hún er True. Starting position er 1.1, forritið athugar hvar þú getur farið,
+#ef þú ferð vitlaust þá lætur forritið þig vita, ef þú ferð á reit sem þú mátt fara þá færist þú. 
+#Ef þú lendir á 3.1 þá sigraru og forritið hættur keyrslu
+def victory(x,y):
+    if x==3 and y==1:
+        print("Victory!")
+        return False
+    else:
+        return True
+
+
 x = 1
 y = 1
 Keep_Playing = True
 while Keep_Playing:
-    if x == 3 and y == 1:
-        print("Victory!")
-        Keep_Playing = False
+    Keep_Playing = victory(x,y)
 
-    elif x == 1 and y == 1:
+    if x == 1 and y == 1:
         print("You can travel: (N)orth.")
         move = input("Direction: ")
         move = move.lower()
