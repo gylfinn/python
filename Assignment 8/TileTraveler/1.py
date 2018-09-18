@@ -1,38 +1,47 @@
+#Forritið keyrir á meðan hún er True. Starting position er 1.1, forritið athugar hvar þú getur farið,
+#ef þú ferð vitlaust þá lætur forritið þig vita, ef þú ferð á reit sem þú mátt fara þá færist þú. 
+#Ef þú lendir á 3.1 þá sigraru og forritið hættur keyrslu
+
+
 x = 1
 y = 1
 Keep_Playing = True
+
+print("You can travel: (N)orth.")
 while Keep_Playing:
     if x == 3 and y == 1:
         print("Victory!")
         Keep_Playing = False
 
     elif x == 1 and y == 1:
-        print("You can travel: (N)orth.")
         move = input("Direction: ")
         move = move.lower()
         if move == "n":
             x = 1
             y = 2
+            print("You can travel: (N)orth or (E)ast or (S)outh.")
         else:
             print("Not a valid direction!")
-
     elif x == 1 and y == 2:
-        print("You can travel: (N)orth or (E)ast or (S)outh.")
         move = input("Direction: ")
         move = move.lower()
         if move == "n":
             x = 1
             y = 3
+            print("You can travel: (E)ast or (S)outh.")
         elif move == "e":
             x = 2
             y = 2
+            print("You can travel: (W)est or (S)outh.")
         elif move == "s":
             x = 1
             y = 1
+            print("You can travel: (N)orth.")
         else:
             print("Not a valid direction!")
+            move = input("Direction: ")
+            move = move.lower()
     elif x == 1 and y == 3:
-        print("You can travel: (E)ast or (S)outh.")
         move = input("Direction: ")
         move = move.lower()
         if move == "e":
@@ -41,8 +50,11 @@ while Keep_Playing:
         elif move == "s":
             x = 1
             y = 2
+            
         else:
             print("Not a valid direction!")
+            move = input("Direction: ")
+            move = move.lower()
     elif x == 2 and y == 1:
         print("You can travel: (N)orth.")
         move = input("Direction: ")
@@ -50,10 +62,10 @@ while Keep_Playing:
         if move == "n":
             x = 2
             y = 2
+            print("You can travel: (W)est or (S)outh.")
         else:
             print("Not a valid direction!")
     elif x == 2 and y == 2:
-        print("You can travel: (W)est or (S)outh.")
         move = input("Direction: ")
         move = move.lower()
         if move == "w":
@@ -64,8 +76,10 @@ while Keep_Playing:
             y = 1
         else:
             print("Not a valid direction!")
+            move = input("Direction: ")
+            move = move.lower()
     elif x == 2 and y == 3:
-        print("You can travel: (W)est or (E)ast.")
+        print("You can travel: (E)ast or (W)est.")
         move = input("Direction: ")
         move = move.lower()
         if move == "w":
@@ -76,8 +90,10 @@ while Keep_Playing:
             y = 3
         else:
             print("Not a valid direction!")
+            move = input("Direction: ")
+            move = move.lower()
     elif x == 3 and y == 3:
-        print("You can travel: (W)est or (S)outh.")
+        print("You can travel: (S)outh or (W)est.")
         move = input("Direction: ")
         move = move.lower()
         if move == "w":
@@ -86,10 +102,12 @@ while Keep_Playing:
         elif move == "s":
             x = 3
             y = 2
+            print("You can travel: (N)orth or (S)outh.")
         else:
             print("Not a valid direction!")
+            move = input("Direction: ")
+            move = move.lower()
     elif x == 3 and y == 2:
-        print("You can travel: (N)orth or (S)outh.")
         move = input("Direction: ")
         move = move.lower()
         if move == "n":
@@ -100,3 +118,5 @@ while Keep_Playing:
             y = 1
         else:
             print("Not a valid direction!")
+            move = input("Direction: ")
+            move = move.lower()

@@ -8,6 +8,9 @@ def victory(x,y):
     else:
         return True
 
+def validmove(x,y):
+    
+
 
 x = 1
 y = 1
